@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>어리틀페퍼 계좌번호</title>
+</head>
+<body onload="copyNumber()">
+    <p>어리틀페퍼</p>
+	<p>계좌번호: 카카오뱅크 <span id="number">3333075797948</span></p>
+
+	<script>
+		function copyNumber() {
+			// 복사할 숫자를 가져옴
+			var number = document.getElementById("number").innerHTML;
+
+			// 클립보드에 복사
+			navigator.clipboard.writeText(number)
+				.then(function() {
+				    alert("계좌번호 복사가 완료되었습니다😀");
+				})
+				.catch(function(error) {
+					alert("계좌번호 복사를 실패했습니다😥 페이지를 새로고침 해주세요.");
+				});
+		}
+	</script>
+</body>
+</html>
