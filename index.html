@@ -5,30 +5,39 @@
     <title>숫자 복사하기</title>
     <style>
       button {
-        padding: 10px;
-        background-color: blue;
+        padding-left: 120px;
+        padding-right: 120px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgb(122, 104, 255);
         color: white;
         border-radius: 5px;
         border: none;
         cursor: pointer;
+        font-size: 18px;
       }
     </style>
   </head>
-  <body>
-    <h1>어리틀페퍼</h1>
-    <p>아래의 복사하기 버튼을 누르세요.</p>
-    <input type="text" id="number" value="3333075797948" readonly>
-    <br><br>
+  <body style="text-align: center;">
+    <h1>alittlepepper</h1>
+    <p>아래의 복사하기 버튼을 누르면 계좌번호가 복사됩니다 😀</p>
+    <p style="opacity: 0;">계좌번호: 카카오뱅크 <span id="number">3333075797948</span></p>
     <button onclick="copyNumber()">복사하기</button>
     
     <script>
       function copyNumber() {
-        var number = document.getElementById("number");
-        number.select();
-        document.execCommand("copy");
-        
-        alert("숫자가 복사되었습니다: " + number.value);
-      }
+			// 복사할 숫자를 가져옴
+			var number = document.getElementById("number").innerHTML;
+
+			// 클립보드에 복사
+			navigator.clipboard.writeText(number)
+				.then(function() {
+					alert("계좌번호가 복사되었습니다💛");
+				})
+				.catch(function(error) {
+					alert("계좌번호 복사에 실패했습니다😭 다시 시도해주세요");
+				});
+		}
     </script>
   </body>
 </html>
