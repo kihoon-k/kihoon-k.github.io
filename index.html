@@ -1,47 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" name="format-detection" content="telephone=no">
-    <title>숫자 복사하기</title>
-    <style>
-      button {
-        width: 90%;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: rgb(246, 164, 172);
-        color: white;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        font-size: 48px;
-        font-weight: bold;
-        border-radius: 18px;
-      }
-    </style>
+    <meta charset="UTF-8">
+    <title>noname</title>
   </head>
-  <body style="text-align: center; font-size: 48px;">
-    </br></br></br></br>
-    <image src="https://s3.ap-northeast-2.amazonaws.com/oricl.co.kr/KakaoTalk_Photo_2023-03-25-00-18-12.png" width="600px" height="600px" />
-    <h1 style="margin-top: -30px; font-family: Arial, Helvetica, sans-serif;">alittlepepper</h1>
-    <p>아래의 복사하기 버튼을 누르면 </br>계좌번호가 복사됩니다 😀</p>
-    <button onclick="copyNumber()">복사하기</button>
-    <p style="font-size: 36px; color: rgb(144, 144, 144); text-decoration: none;">카카오뱅크 3333-07-5797948</p>
-    <p style="opacity: 0;">계좌번호: 카카오뱅크 <span id="number">3333075797948</span></p>
+  <body>
     
-    <script>
-      function copyNumber() {
-			// 복사할 숫자를 가져옴
-			var number = document.getElementById("number").innerHTML;
-
-			// 클립보드에 복사
-			navigator.clipboard.writeText(number)
-				.then(function() {
-					alert("계좌번호가 복사되었습니다💛");
-				})
-				.catch(function(error) {
-					alert("계좌번호 복사에 실패했습니다😭 다시 시도해주세요");
-				});
-		}
-    </script>
   </body>
 </html>
